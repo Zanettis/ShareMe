@@ -17,13 +17,13 @@ const Home = () => {
 
   const userInfo = fetchUser;
 
- // useEffect(() => {
- //   const query = userQuery(userInfo?.googleId);
+  useEffect(() => {
+    const query = userQuery(userInfo?.googleId);
 
- //   client.fetch(query).then((data) => {
- //       setUser(data[0]);
- //     })
- // }, []);
+    client.fetch(query).then((data) => {
+        setUser(data[0]);
+      })
+  }, []);
 
     useEffect(() => {
       scrollRef.current.scrollTo(0, 0);
